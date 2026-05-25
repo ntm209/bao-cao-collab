@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Báo cáo cá nhân: Ứng dụng công cụ hợp tác trực tuyến trong dự án nhóm - Ngô Tuấn Minh - VJU">
+    <title>Báo Cáo: Ứng Dụng Công Cụ Hợp Tác Trực Tuyến | Ngô Tuấn Minh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🔗</span>
+                <span class="logo-text">Collab<span class="accent">Hub</span></span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active">Trang chủ</a>
+                <a href="#info" class="nav-link">Thông tin</a>
+                <a href="#tools" class="nav-link">Công cụ</a>
+                <a href="#tasks" class="nav-link">Tác vụ</a>
+                <a href="#resources" class="nav-link">Tài nguyên</a>
+                <a href="#challenges" class="nav-link">Thách thức</a>
+                <a href="#conclusion" class="nav-link">Kết luận</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Khoa FATE — Trường Đại học Việt Nhật (VJU)
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Ứng Dụng Công Cụ
+                <span class="gradient-text">Hợp Tác Trực Tuyến</span>
+                Trong Dự Án Nhóm
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Quản lý hiệu quả dự án <em>8 thành viên</em> với hệ sinh thái công cụ số: Trello, Google Docs, Drive & Messenger.
+            </p>
+            <div class="hero-meta animate-fade-in-up delay-2">
+                <div class="meta-item">
+                    <span class="meta-icon">👤</span>
+                    <div>
+                        <span class="meta-label">Sinh viên</span>
+                        <span class="meta-value">Ngô Tuấn Minh</span>
+                    </div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-icon">👑</span>
+                    <div>
+                        <span class="meta-label">Vai trò</span>
+                        <span class="meta-value">Nhóm trưởng</span>
+                    </div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-icon">📚</span>
+                    <div>
+                        <span class="meta-label">Môn học</span>
+                        <span class="meta-value">Triết học Mác-Lênin</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#tools" class="hero-cta animate-fade-in-up delay-3">
+                <span>Xem Chi Tiết</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+        <div class="hero-image animate-fade-in delay-2">
+            <img src="images/hero.png" alt="Online Collaboration">
+            <div class="hero-image-glow"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Cuộn xuống</span>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="section" id="info">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📌 Phần I</span>
+                <h2 class="section-title">Thông Tin <span class="gradient-text">Chung</span></h2>
+                <p class="section-desc">Tổng quan về dự án nhóm và vai trò cá nhân trong quá trình thực hiện.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card glass-card">
+                    <div class="info-icon">🎓</div>
+                    <div class="info-label">Họ và tên</div>
+                    <div class="info-value">Ngô Tuấn Minh</div>
+                </div>
+                <div class="info-card glass-card">
+                    <div class="info-icon">🏫</div>
+                    <div class="info-label">Khoa / Trường</div>
+                    <div class="info-value">FATE — Đại học Việt Nhật</div>
+                </div>
+                <div class="info-card glass-card">
+                    <div class="info-icon">📖</div>
+                    <div class="info-label">Dự án</div>
+                    <div class="info-value">Thuyết trình Triết học Mác-Lênin</div>
+                </div>
+                <div class="info-card glass-card">
+                    <div class="info-icon">👥</div>
+                    <div class="info-label">Quy mô nhóm</div>
+                    <div class="info-value">8 thành viên</div>
+                </div>
+                <div class="info-card glass-card">
+                    <div class="info-icon">👑</div>
+                    <div class="info-label">Vai trò</div>
+                    <div class="info-value">Nhóm trưởng / Điều phối</div>
+                </div>
+                <div class="info-card glass-card">
+                    <div class="info-icon">🛠️</div>
+                    <div class="info-label">Số công cụ</div>
+                    <div class="info-value">4 công cụ chính</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section section-dark" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🛠️ Phần II</span>
+                <h2 class="section-title">Thiết Lập & Sử Dụng <span class="gradient-text">Công Cụ</span></h2>
+                <p class="section-desc">4 công cụ thuộc các nhóm chức năng khác nhau được sử dụng đồng bộ trong dự án.</p>
+            </div>
+            <div class="tools-grid">
+                <!-- Tool 1: Trello -->
+                <div class="tool-card glass-card">
+                    <div class="tool-header">
+                        <div class="tool-number">01</div>
+                        <div class="tool-badge trello">Quản lý dự án</div>
+                    </div>
+                    <div class="tool-image">
+                        <img src="images/trello.png" alt="Trello Board">
+                    </div>
+                    <h3>Trello</h3>
+                    <p>Tạo Workspace chung với các cột trạng thái: <strong>Backlog → To Do → Doing → Review → Done</strong>. Gắn nhãn màu sắc theo mức độ ưu tiên và dùng Mention để giao việc đích danh.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Kanban Board</span>
+                        <span class="feature-tag">Labels</span>
+                        <span class="feature-tag">Assign</span>
+                        <span class="feature-tag">Deadline</span>
+                    </div>
+                </div>
+                <!-- Tool 2: Google Docs -->
+                <div class="tool-card glass-card">
+                    <div class="tool-header">
+                        <div class="tool-number">02</div>
+                        <div class="tool-badge docs">Soạn thảo cộng tác</div>
+                    </div>
+                    <div class="tool-image">
+                        <img src="images/docs.png" alt="Google Docs">
+                    </div>
+                    <h3>Google Docs</h3>
+                    <p>Tạo file nội dung kịch bản thuyết trình, thiết lập định dạng chuẩn và đính kèm link trực tiếp vào thẻ nhiệm vụ tương ứng trên Trello để truy cập <strong>chỉ với một cú click</strong>.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Real-time Edit</span>
+                        <span class="feature-tag">Comments</span>
+                        <span class="feature-tag">Suggesting</span>
+                    </div>
+                </div>
+                <!-- Tool 3: Google Drive -->
+                <div class="tool-card glass-card">
+                    <div class="tool-header">
+                        <div class="tool-number">03</div>
+                        <div class="tool-badge drive">Lưu trữ đám mây</div>
+                    </div>
+                    <div class="tool-image">
+                        <img src="images/storage.png" alt="Google Drive">
+                    </div>
+                    <h3>Google Drive</h3>
+                    <p>Xây dựng <strong>hệ thống lưu trữ tài nguyên chung</strong> với cấu trúc thư mục 3 cấp logic và phân quyền truy cập an toàn cho cả nhóm.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Folder Structure</span>
+                        <span class="feature-tag">Permissions</span>
+                        <span class="feature-tag">Sharing</span>
+                    </div>
+                </div>
+                <!-- Tool 4: Messenger/Zalo -->
+                <div class="tool-card glass-card">
+                    <div class="tool-header">
+                        <div class="tool-number">04</div>
+                        <div class="tool-badge chat">Giao tiếp nhóm</div>
+                    </div>
+                    <div class="tool-image">
+                        <img src="images/chat.png" alt="Zalo/Messenger">
+                    </div>
+                    <h3>Zalo / Messenger</h3>
+                    <p>Thiết lập nhóm chat công việc, <strong>ghim (pin) các thông báo quan trọng</strong> và link Trello/Drive lên đầu nhóm để không trôi tin nhắn.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Pin Messages</span>
+                        <span class="feature-tag">Group Chat</span>
+                        <span class="feature-tag">Reminders</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Diagram -->
+    <section class="section" id="workflow">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🔄 Quy trình</span>
+                <h2 class="section-title">Luồng Công Việc <span class="gradient-text">Tích Hợp</span></h2>
+                <p class="section-desc">Cách 4 công cụ kết nối và bổ trợ cho nhau trong quy trình làm việc nhóm.</p>
+            </div>
+            <div class="workflow-container glass-card">
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-icon trello-bg">📋</div>
+                        <div class="step-content">
+                            <h4>Trello</h4>
+                            <p>Phân công & theo dõi</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon docs-bg">📝</div>
+                        <div class="step-content">
+                            <h4>Google Docs</h4>
+                            <p>Soạn nội dung</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon drive-bg">☁️</div>
+                        <div class="step-content">
+                            <h4>Google Drive</h4>
+                            <p>Lưu trữ & quản lý</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-icon chat-bg">💬</div>
+                        <div class="step-content">
+                            <h4>Zalo/Messenger</h4>
+                            <p>Trao đổi & nhắc nhở</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasks & Interaction Section -->
+    <section class="section section-dark" id="tasks">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📊 Phần III</span>
+                <h2 class="section-title">Quản Lý Tác Vụ & <span class="gradient-text">Tương Tác</span></h2>
+                <p class="section-desc">Cách quản lý hiệu quả tác vụ và duy trì tương tác liên tục trong nhóm 8 người.</p>
+            </div>
+            <div class="interaction-grid">
+                <div class="interaction-card glass-card">
+                    <div class="interaction-header">
+                        <span class="interaction-icon">📋</span>
+                        <h3>Quản lý tác vụ</h3>
+                    </div>
+                    <ul class="interaction-list">
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>100%</strong> nhiệm vụ trên Trello có mô tả chi tiết yêu cầu</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Thiết lập <strong>Checklist</strong> công việc cụ thể cho từng thẻ</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Deadline</strong> rõ ràng trước ngày báo cáo môn học</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Cập nhật tiến độ ít nhất <strong>3 lần/tuần</strong></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="interaction-card glass-card">
+                    <div class="interaction-header">
+                        <span class="interaction-icon">💬</span>
+                        <h3>Tương tác nhóm</h3>
+                    </div>
+                    <ul class="interaction-list">
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Dùng <strong>Comment</strong> trên Google Docs để góp ý nội dung</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Duy trì <strong>reminder</strong> nhắc nhở tiến độ trên nhóm chat</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Giải đáp thắc mắc cho thành viên kịp thời</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span>Đạt trên <strong>10 lượt tương tác/tuần</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Nhiệm vụ có mô tả chi tiết</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-unit">người</div>
+                    <div class="stat-label">Thành viên được quản lý</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-unit">lần/tuần</div>
+                    <div class="stat-label">Cập nhật tiến độ</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-unit">lượt/tuần</div>
+                    <div class="stat-label">Tương tác nhóm chat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Management Section -->
+    <section class="section" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📁 Phần IV</span>
+                <h2 class="section-title">Quản Lý <span class="gradient-text">Tài Nguyên & Tệp Tin</span></h2>
+                <p class="section-desc">Hệ thống tổ chức tài liệu chuyên nghiệp đảm bảo kiểm soát 100% tệp tin.</p>
+            </div>
+            <div class="resources-grid">
+                <!-- Folder Structure -->
+                <div class="resource-card glass-card">
+                    <div class="resource-icon">📂</div>
+                    <h3>Cấu trúc thư mục 3 cấp</h3>
+                    <div class="folder-tree">
+                        <div class="folder root">
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">ThuyetTrinh_TrietHoc_Nhom8</span>
+                        </div>
+                        <div class="folder child">
+                            <span class="folder-line">├──</span>
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">1. Tai_Lieu_Tham_Khao</span>
+                        </div>
+                        <div class="folder child">
+                            <span class="folder-line">├──</span>
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">2. Ban_Draft_NoiDung</span>
+                            <span class="permission-badge editor">Editor</span>
+                        </div>
+                        <div class="folder child last">
+                            <span class="folder-line">└──</span>
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-name">3. Slide_HoanThien</span>
+                            <span class="permission-badge viewer">View Only</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Naming Convention -->
+                <div class="resource-card glass-card">
+                    <div class="resource-icon">🏷️</div>
+                    <h3>Quy chuẩn đặt tên tệp</h3>
+                    <div class="naming-convention">
+                        <div class="naming-format">
+                            <code>[Ngày]_[TênNộiDung]_[TênNgườiLàm]</code>
+                        </div>
+                        <div class="naming-example">
+                            <div class="example-label">Ví dụ:</div>
+                            <div class="example-file">
+                                <span class="file-icon">📄</span>
+                                <code>20260515_PhanTichPhepBienChung_MinhNT.docx</code>
+                            </div>
+                        </div>
+                        <div class="naming-result">
+                            <span class="result-badge">✅ Kiểm soát 100% tệp tin tải lên</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Access Control -->
+                <div class="resource-card glass-card full-width">
+                    <div class="resource-icon">🔐</div>
+                    <h3>Phân quyền truy cập</h3>
+                    <div class="access-grid">
+                        <div class="access-item">
+                            <div class="access-folder">
+                                <span>📁</span> Ban_Draft_NoiDung
+                            </div>
+                            <div class="access-level editor-level">
+                                <span class="access-dot"></span>
+                                <strong>Editor</strong> — Toàn nhóm được chỉnh sửa
+                            </div>
+                            <p class="access-reason">Cho phép cả nhóm cùng soạn thảo nội dung bản thảo.</p>
+                        </div>
+                        <div class="access-item">
+                            <div class="access-folder">
+                                <span>📁</span> Slide_HoanThien
+                            </div>
+                            <div class="access-level viewer-level">
+                                <span class="access-dot"></span>
+                                <strong>View / Comment</strong> — Chỉ xem và bình luận
+                            </div>
+                            <p class="access-reason">Tránh vô tình xóa mất bản cuối cùng sát ngày thuyết trình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="section section-dark" id="challenges">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">⚡ Phần V</span>
+                <h2 class="section-title">Thách Thức & <span class="gradient-text">Giải Pháp</span></h2>
+                <p class="section-desc">3 thách thức lớn nhất khi quản lý dự án nhóm 8 người và cách giải quyết triệt để.</p>
+            </div>
+            <div class="challenge-image">
+                <img src="images/challenges.png" alt="Challenges and Solutions">
+            </div>
+            <div class="challenges-list">
+                <!-- Challenge 1 -->
+                <div class="challenge-card glass-card">
+                    <div class="challenge-header">
+                        <div class="challenge-number">01</div>
+                        <div>
+                            <h3>Quản lý khối lượng công việc cho nhóm 8 người</h3>
+                            <span class="challenge-tool">Giải quyết bằng: Trello</span>
+                        </div>
+                    </div>
+                    <div class="challenge-body">
+                        <div class="problem-box">
+                            <div class="box-label problem-label">❌ Vấn đề</div>
+                            <p>Rất dễ xảy ra tình trạng <strong>chồng chéo tác vụ</strong> hoặc phân chia không đồng đều — người làm quá nhiều, người làm quá ít.</p>
+                        </div>
+                        <div class="solution-box">
+                            <div class="box-label solution-label">✅ Giải pháp</div>
+                            <p>Sử dụng tính năng <strong>Assign members</strong> vào từng thẻ việc nhỏ. Nhìn vào tổng quan bảng có thể dễ dàng theo dõi khối lượng công việc của từng cá nhân thông qua số lượng thẻ để <strong>điều phối lại ngay lập tức</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Challenge 2 -->
+                <div class="challenge-card glass-card">
+                    <div class="challenge-header">
+                        <div class="challenge-number">02</div>
+                        <div>
+                            <h3>Xung đột nội dung khi cùng soạn thảo</h3>
+                            <span class="challenge-tool">Giải quyết bằng: Google Docs</span>
+                        </div>
+                    </div>
+                    <div class="challenge-body">
+                        <div class="problem-box">
+                            <div class="box-label problem-label">❌ Vấn đề</div>
+                            <p>Kịch bản môn Triết rất dài, khi nhiều người cùng gõ trên một file dễ dẫn đến <strong>xóa nhầm ý</strong> của nhau hoặc <strong>làm hỏng định dạng</strong> chung.</p>
+                        </div>
+                        <div class="solution-box">
+                            <div class="box-label solution-label">✅ Giải pháp</div>
+                            <p>Quy định mỗi người làm việc trên <strong>khu vực được đánh dấu tên sẵn</strong>. Khi muốn sửa bài người khác, bắt buộc bật chế độ <strong>"Suggesting mode"</strong> thay vì chỉnh sửa trực tiếp, sau đó cả nhóm thống nhất Accept/Reject.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Challenge 3 -->
+                <div class="challenge-card glass-card">
+                    <div class="challenge-header">
+                        <div class="challenge-number">03</div>
+                        <div>
+                            <h3>Phân tán thông tin trên công cụ giao tiếp</h3>
+                            <span class="challenge-tool">Giải quyết bằng: Zalo/Messenger + Trello</span>
+                        </div>
+                    </div>
+                    <div class="challenge-body">
+                        <div class="problem-box">
+                            <div class="box-label problem-label">❌ Vấn đề</div>
+                            <p>Tần suất trao đổi lớn khiến file tài liệu hoặc thông báo quan trọng <strong>bị trôi đi mất</strong>, thành viên hay mất công lội lại tin nhắn.</p>
+                        </div>
+                        <div class="solution-box">
+                            <div class="box-label solution-label">✅ Giải pháp</div>
+                            <p>Kết hợp tính năng <strong>"Ghim tin nhắn" (Pin)</strong> cho thông báo khẩn cấp. Quy định nghiêm ngặt: mọi tài liệu chính thức phải đẩy link lên <strong>Trello và Drive</strong> thay vì gửi file trực tiếp qua chat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="section" id="conclusion">
+        <div class="container">
+            <div class="conclusion-card glass-card">
+                <div class="conclusion-icon">🎯</div>
+                <h2>Kết Luận</h2>
+                <div class="conclusion-divider"></div>
+                <p class="conclusion-text">
+                    Quá trình chạy dự án cho thấy việc áp dụng <strong>đồng bộ hệ thống công cụ số</strong> không chỉ giúp bài thuyết trình được hoàn thiện <span class="highlight-number">đúng hạn</span> mà còn giải quyết triệt để bài toán <strong>quản lý con người</strong>.
+                </p>
+                <div class="conclusion-lesson glass-card">
+                    <div class="lesson-icon">💡</div>
+                    <div class="lesson-content">
+                        <h4>Bài học rút ra</h4>
+                        <p>Công cụ số chỉ phát huy tác dụng tối đa khi đi kèm với một <strong>quy trình làm việc (workflow) rõ ràng</strong> và <strong>sự kỷ luật tuân thủ</strong> từ tất cả 8 thành viên trong nhóm.</p>
+                    </div>
+                </div>
+                <div class="conclusion-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📋</div>
+                        <span>Trello quản lý tác vụ hiệu quả</span>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📝</div>
+                        <span>Google Docs cộng tác thời gian thực</span>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">☁️</div>
+                        <span>Drive lưu trữ có tổ chức</span>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">💬</div>
+                        <span>Messenger kết nối liên tục</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🔗</span>
+                        <span class="logo-text">Collab<span class="accent">Hub</span></span>
+                    </div>
+                    <p>Báo cáo cá nhân — Ngô Tuấn Minh</p>
+                    <p>Khoa FATE — Trường Đại học Việt Nhật (VJU)</p>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">© 2025 Ngô Tuấn Minh | Trường Đại học Việt Nhật (VJU). Mọi quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Quay lại đầu trang">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
